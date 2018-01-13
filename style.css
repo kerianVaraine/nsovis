@@ -2,7 +2,7 @@ main {
     margin-top: 0px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 10px) {
     .section {
         padding-top: 55px;
     }
