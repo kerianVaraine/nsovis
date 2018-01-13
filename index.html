@@ -14,25 +14,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="home">
     <nav>
-        <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo center"><img src="imgs/logo.png" alt="OVIS" class="ovis-logo"></a>
-            <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <div id="top-nav" class="nav-wrapper">
+            <a href="#home" class="brand-logo center"><img src="imgs/logo.png" alt="OVIS" class="ovis-logo"></a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#issue">The Issue</a></li>
                 <li><a href="#lifecycle">Lifecycle</a></li>
                 <li><a href="#treatment">Treatment</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <ul class="sidenav" id="mobile-menu">
-                <li><a href="#issue">The issue</a></li>
-                <li><a href="#lifecycle">Lifecycle</a></li>
-                <li><a href="#treatment">Treatment</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="sidenav" id="slide-out">
+                <!-- old id mobile-menu  -->
+                <li><a href="#!issue">The issue</a></li>
+                <li><a href="#!lifecycle">Lifecycle</a></li>
+                <li><a href="#!treatment">Treatment</a></li>
+                <li><a href="#!contact">Contact</a></li>
             </ul>
         </div>
     </nav>
+
     <main>
         <div class="parallax-container center">
             <div class="container">
@@ -137,7 +139,7 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="Extra_information" name="extra information" type="text" class="validate">
+                            <input id="Extra_information" name="extra information" type="text" class="materialize-textarea validate">
                             <label for="Extra information">Please add any relevant information.</label>
                         </div>
                     </div>
@@ -149,7 +151,7 @@
             </div>
 
         </div>
-
+        <br><br><br><br>
     </main>
 
 
@@ -163,8 +165,8 @@
         $('.sidenav').sidenav();
         $('.parallax').parallax();
         $('.materialboxed').materialbox();
-        $('#textarea1').val('New Text');
-        $('#textarea1').trigger('autoresize');
+        // $('#Extra_information');
+        $('#Extra_information').trigger('autoresize');
 
         // Contact Form
         $('form#contact_form').validate({
