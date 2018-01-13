@@ -25,15 +25,15 @@
                 <li><a href="#treatment">Treatment</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <ul class="sidenav" id="slide-out">
-                <!-- old id mobile-menu  -->
-                <li><a href="#issue">The issue</a></li>
-                <li><a href="#lifecycle">Lifecycle</a></li>
-                <li><a href="#treatment">Treatment</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </div>
     </nav>
+    <!-- This pulled out of nav section, was not working unsure why -->
+    <ul id="slide-out" class="sidenav side-nav-over">
+        <li><a class="sidenav-close" href="#issue">The issue</a></li>
+        <li><a class="sidenav-close" href="#lifecycle">Lifecycle</a></li>
+        <li><a class="sidenav-close" href="#treatment">Treatment</a></li>
+        <li><a class="sidenav-close" href="#contact">Contact</a></li>
+    </ul>
 
     <main>
         <div class="parallax-container center">
@@ -167,24 +167,23 @@
         $('.materialboxed').materialbox();
         // $('#Extra_information');
         $('#Extra_information').trigger('autoresize');
-
-        // Contact Form
-        $('form#contact_form').validate({
-            messages: {},
-            submitHandler: function(form) {
-                $.ajax({
-                    url: "//formspree.io/chambervulgarus@gmail.com",
-                    method: "POST",
-                    data: $(form).serialize(),
-                    dataType: "json",
-                    success: function(data) {
-                        $("form#contact_form :input").prop("disabled", true);
-                        $('#thanks').show();
-                    }
-                });
-                return false;
-            }
-        });
+    });
+    // Contact Form
+    $('form#contact_form').validate({
+        messages: {},
+        submitHandler: function(form) {
+            $.ajax({
+                url: "//formspree.io/chambervulgarus@gmail.com",
+                method: "POST",
+                data: $(form).serialize(),
+                dataType: "json",
+                success: function(data) {
+                    $("form#contact_form :input").prop("disabled", true);
+                    $('#thanks').show();
+                }
+            });
+            return false;
+        }
     });
 </script>
 <!-- materialize js load -->

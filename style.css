@@ -2,10 +2,8 @@ main {
     margin-top: 0px;
 }
 
-@media screen and (min-width: 800px) {
-    .section {
-        padding-top: 55px;
-    }
+.section {
+    padding-top: 55px;
 }
 
 .wrapper {
